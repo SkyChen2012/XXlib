@@ -6,7 +6,7 @@
 #        Author: Benson - zjxucb@gmail.com
 #   Description: ---
 #        Create: 2018-02-01 09:47:03
-# Last Modified: 2018-02-01 14:06:53
+# Last Modified: 2018-02-02 13:06:26
 #***********************************************
 
 # udp_gb_server.py
@@ -18,9 +18,9 @@ import threading
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 s.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
 
-PORT = 1060
+PORT = 5354
 
-network = '<broadcast>'
+network = '224.0.0.251'
 
 
 def fun_timer():

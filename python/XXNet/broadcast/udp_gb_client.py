@@ -6,7 +6,7 @@
 #        Author: Benson - zjxucb@gmail.com
 #   Description: ---
 #        Create: 2018-02-01 14:04:46
-# Last Modified: 2018-02-01 14:05:05
+# Last Modified: 2018-02-02 13:05:55
 #***********************************************
 
 # udp_gb_client.py
@@ -17,7 +17,7 @@ import socket
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 s.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
 
-PORT = 1060
+PORT = 5354
 
 s.bind(('', PORT))
 print('Listening for broadcast at ', s.getsockname())
