@@ -22,9 +22,11 @@ JSON 解码为 Python 类型转换对应表：
 """
 
 import json
+import codecs
 
-from DataModel.labelinfo import *
-from Tools import ConversionTool
+# from DataModel.labelinfo import *
+# from Tools import ConversionTool
+
 
 # Python 字典类型转换为 JSON 对象
 def PythonDirToJson(data):
@@ -51,7 +53,11 @@ def JsonToPythonDir(json_str):
 
 
 def lableinfoTest(lableinfo):
-    label = labelInfo()
-    label.defaut()
-    print("Class ==> ", dir(ConversionTool.DirToObj(JsonToPythonDir(PythonDirToJson(ConversionTool.ObjToDir(label))))))
+    fd = codecs.open('/Users/Benson/Desktop/demo.js')
+    text = fd.read()
+    print(text)
+    # label = labelInfo()
+    # label.defaut()
+    # print("Class ==> ", dir(ConversionTool.DirToObj(JsonToPythonDir(PythonDirToJson(ConversionTool.ObjToDir(label))))))
 
+self.lableinfoTest()
